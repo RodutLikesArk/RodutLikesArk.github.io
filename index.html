@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Doro Invasion</title>
+   <script type="module" src="Output.js"></script>
+   <script src="jquery-3.7.1.js">
+  </script>
+  <script>
+                
+    $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+        $("#gfg").html(data.ip);
+    })
+    </script>
+    <script>
+     const fs = require('fs');
+let data = "doin ur mom";
+
+fs.writeFile('Output.txt', data, (err) => {
+ 
+ // In case of a error throw err.
+ if (err) throw err;
+})
+    </script>
+  </head>
+  <body>
+        <h1>GeeksforGeeks</h1>
+        <h3>Public IP Address of user is:</h3>
+        <p id="gfg"></p>
+
+</body>
+</html>
